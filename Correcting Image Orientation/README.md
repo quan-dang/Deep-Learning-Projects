@@ -33,22 +33,25 @@ Verified on Windows 10, with GTX 1060 6GB and RAM 16GB
 
 ## How to run
 
-0. __Step 0__: 
-
-Download the dataset, extract, copy and rename 'Images' folder to 'images', then put it under __indoor_cvpr/__.
+0. __Step 0__: Download the dataset, extract, copy and rename 'Images' folder to 'images', then put it under __indoor_cvpr/__.
 
 1. __Step 1__: Build the dataset
 
+```
 python build_dataset.py --dataset indoor_cvpr/images --output indoor_cvpr/rotated_images
-
+```
 2. __Step 2__: Extract features from our rotated images dataset
 
+```
 python extract_features.py --dataset indoor_cvpr/rotated_images --output indoor_cvpr/hdf5/orientation_features.hdf5
-
+```
 3. __Step 3__: Train our Logistic Regression classifier on the extracted features from VGG16 network
 
+```
 python train_model.py --db indoor_cvpr/hdf5/orientation_features.hdf5 --model models/orientation.cpickle
-
+```
 4. __Step 4__: Test the performance of our model
 
+```
 python orient_images.py --db indoor_cvpr/hdf5/orientation_features.hdf5 --dataset indoor_cvpr/rotated_images --model models/orientation.cpickle
+```

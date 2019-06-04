@@ -20,23 +20,35 @@ Verified on Windows 10 with GTX 1060 6GB and 16GB RAM
 ## How to run
 0. __Step 0__: Folder structure setup
 
-* Create 'fer2013' in the root path of the project, which contains 3 subfolders inside. They are 'fer2013' containing 'fer2013.csv', an empty 'hdf5' folder, and an empty 'output' folder.
+- Create 'fer2013' in the root path of the project, which contains 3 subfolders inside. They are 'fer2013' containing 'fer2013.csv', an empty 'hdf5' folder, and an empty 'output' folder.
 
-* Create 'checkpoints' in the root path of the project.
+- Create 'checkpoints' in the root path of the project.
 
 
 1. __Step 1__: Build the dataset to train.hdf5, val.hdf5 and test.hdf5
 
+```
 python build_dataset.py
-
+```
 2. __Step 2__: Train the model
+
+```
 python train_recognizer.py --checkpoints checkpoints
-
+```
 3. __Step 3__: Test the model 
-python test_recognizer.py --model checkpoints/epoch_15.hdf5
 
+```
+python test_recognizer.py --model checkpoints/epoch_15.hdf5
+```
 4. __Step 4__: Detect emotion by webcam or video
 
-* __Webcam__: python emotion_detector.py --cascade haarcascade_frontalface_default.xml --model checkpoints/epoch_15.hdf5
+- __Webcam__: 
 
-* __video__: python emotion_detector.py --cascade haarcascade_frontalface_default.xml --model checkpoints/epoch_15.hdf5 --video quan.mp4
+```
+python emotion_detector.py --cascade haarcascade_frontalface_default.xml --model checkpoints/epoch_15.hdf5
+```
+- __video__: 
+
+```
+python emotion_detector.py --cascade haarcascade_frontalface_default.xml --model checkpoints/epoch_15.hdf5 --video quan.mp4
+```

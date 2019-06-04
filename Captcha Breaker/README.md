@@ -21,17 +21,25 @@ This project retrieved captcha from [E-ZPass] website. (https://www.e-zpassny.co
 ## How to run
 1. __Step 1__: Download captcha images from E-Zpass URL
 
+```
 python download_images.py --output downloads
+```
 
 2. __Step 2__: Annotate manually captcha images
 
+```
 python annotate.py --input downloads --annot dataset
+```
 
 3. __Step 3__: train LeNet model on the dataset
 
+```
 python train_model.py --dataset dataset --model output/lenet.hdf5
+```
 
 4. __Step 4__: test LeNet model
 
+```
 python test_model.py --input downloads --model output/lenet.hdf5
+```
 

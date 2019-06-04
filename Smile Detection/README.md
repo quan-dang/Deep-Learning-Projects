@@ -17,17 +17,19 @@ Download the dataset, to 'datasets' folder under the root path of the project, n
 
 1. __Step 1__: Train the LeNet model on the SMILEs dataset
 
+```
 python train_model.py --dataset ../datasets/SMILEsmileD --model output/lenet.hdf5
-
+```
 2. __Step 2__: Test the model
 
-Using webcam:
+- Using webcam:
 
+```
 python detect_smile.py --cascade haarcascade_frontalface_default.xml --model output/lenet.hdf5
+```
 
-OR 
+- Using a video:
 
-Using a video:
-
+```
 python detect_smile.py --cascade haarcascade_frontalface_default.xml --model output/lenet.hdf5 --video quan.mp4
-
+```
