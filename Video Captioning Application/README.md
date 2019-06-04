@@ -2,9 +2,9 @@
 Build a Video Captioning System leveraging the sequence-to-sequence—video to text architecture
 
 ## Datasets
-[Data link for Videos] (http://www.cs.utexas.edu/users/ml/clamp/videoDescription/YouTubeClips.tar)
+[Data link for Videos](http://www.cs.utexas.edu/users/ml/clamp/videoDescription/YouTubeClips.tar)
 
-[Data link for Captions] (https://github.com/jazzsaxmafia/video_to_sequence/files/387979/video_corpus.csv.zip)
+[Data link for Captions](https://github.com/jazzsaxmafia/video_to_sequence/files/387979/video_corpus.csv.zip)
 
 ## System requirement
 Verified on Windows 10 GTX 1060 6GB and 16GB RAM

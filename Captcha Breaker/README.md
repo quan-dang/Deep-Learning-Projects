@@ -16,7 +16,7 @@
 7. __utilities__: utility functions.
 
 ## Dataset
-This project retrieved captcha from [E-ZPass] website. (https://www.e-zpassny.com/vector/jcaptcha.do)
+This project retrieved captcha from [E-ZPass](https://www.e-zpassny.com/vector/jcaptcha.do) website. 
 
 ## How to run
 1. __Step 1__: Download captcha images from E-Zpass URL

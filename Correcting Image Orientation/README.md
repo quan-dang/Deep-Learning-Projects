@@ -4,9 +4,8 @@
 The project use VGG16 network architecture to extract features from the dataset, and then apply Logistic Regression classifier to correct rotated images.
 
 ## Dataset
-This project use the Indoor Scene Recognition (Indoor CVPR) dataset released by MIT, which contains 67 indoor categories such as homes, offices, stores, .etc.
+This project use the Indoor Scene Recognition ([Indoor CVPR](http://web.mit.edu/torralba/www/indoor.html)) dataset released by MIT, which contains 67 indoor categories such as homes, offices, stores, .etc.
 
-__Link__: http://web.mit.edu/torralba/www/indoor.html
 
 ## System requirement
 Verified on Windows 10, with GTX 1060 6GB and RAM 16GB

@@ -18,6 +18,6 @@ python MachineTranslationWord2Vec.py --path 'data/fra.txt' --epochs 20 --batch_s
 ```
 
 ## Datasets
-[Data] (http://www.manythings.org/anki/)
+[Data](http://www.manythings.org/anki/)
 
 Dataset name : fra-eng/fra.txt
