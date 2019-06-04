@@ -43,9 +43,9 @@ Inside 'experiments' folder, make 3 subfolders, i.e., 'training', 'evaluation' a
 
 __1. Step 1__: Build the dataset and split a training and testing datasets.
 
-"""
+```
 python build_lisa_records.py
-"""
+```
 
 __2. Step 2__: Download [faster_rcnn_resnet101_coco_2018_01_28.tar.gz](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) and extract to __experiments/training__.
 
@@ -54,28 +54,30 @@ to __experiments/training__ and change its name to faster_rcnn_lisa.config, then
 
 __4. Step 4__: Train R-CNN (go to the models/research to execute the command)
 
-"""
+```
 python object_detection/train.py --logtostderr 
 --pipeline PATH_TO_ROOT_PROJECT/lisa/experiments/training/faster_rcnn_lisa.config 
 --train_dir PATH_TO_ROOT_PROJECT/lisa/experiments/training
-"""
+```
 
 __5. Step 5__: Evaluate the network (go to the models/research to execute the command)
-"""
+
+```
 python object_detection/eval.py --logtostderr 
 --pipeline_config_path PATH_TO_ROOT_PROJECT/lisa/experiments/training/faster_rcnn_lisa.config 
 --checkpoint_dir PATH_TO_ROOT_PROJECT/lisa/experiments/training 
 --eval_dir PATH_TO_ROOT_PROJECT/lisa/experiments/evaluation
-"""
+```
 
 __6. Step 6__: Predict a sample image
-"""
+
+```
 python predict.py
 --model PATH_TO_ROOT_PROJECT/lisa/experiments/exported_model/frozen_inference_graph.pb
 --labels PATH_TO_ROOT_PROJECT/lisa/records/classes.pbtxt
 --image path/to/input/image.png
 --num-classes 3
-"""
+```
 
 
 
